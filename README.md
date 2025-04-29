@@ -1,11 +1,7 @@
 # Apartment-management-system-
-Tent Login
-User Nmae admin@gmail.com
-Password admin
 
-Admin login 
-User name admin
-Password admin123
+
+
 
 Apartment Management System
 An Apartment Management System built using PHP, designed to help apartment managers and tenants manage apartment complexes effectively. It supports functionalities such as tenant management, rent payment tracking, maintenance requests, and more.
