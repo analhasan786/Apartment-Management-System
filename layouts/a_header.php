@@ -72,10 +72,10 @@ $Name = isset($_SESSION['Name']) ? htmlspecialchars($_SESSION['Name']) : 'Admin'
                     <li>
                         <a href="apartments.php">Manage Apartments</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="tenants.php">Manage Tenants</a>
 
-                    </li>
+                    </li> -->
                     <li>
                         <a href="payments.php">Manage Payments</a>
                     </li>
@@ -85,7 +85,7 @@ $Name = isset($_SESSION['Name']) ? htmlspecialchars($_SESSION['Name']) : 'Admin'
                     <li>
                         <a href="manage_employee.php">Add Employees</a>
                     </li>
-                    <li id="logout">
+                    <li id="logout" style="margin-top: 20px;">
                         <a href="logout.php" class="btn">Logout</a>
                     </li>
 

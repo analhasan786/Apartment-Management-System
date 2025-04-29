@@ -102,6 +102,11 @@ $emp_count = $result_emp->fetch_assoc()['total_employees'];
                 <p><?php echo $emp_count; ?></p>
                 <a href="manage_employee.php">Add Employee</a>
             </div>
+            <div class="dashboard-box">
+                <h3>Total Complain</h3>
+                <p><?php echo $emp_count; ?></p>
+                <a href="complain.php">Manage Complain</a>
+            </div>
         </div>
     </div>
     </div>

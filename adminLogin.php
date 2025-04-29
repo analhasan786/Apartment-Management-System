@@ -2,23 +2,33 @@
 session_start();
 include 'db.php';
 
+$error_message = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['admin_username'];
     $password = $_POST['admin_password'];
 
+    // Query to find admin by username
     $sql = "SELECT * FROM Admin WHERE Username = '$username' LIMIT 1";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         $admin = $result->fetch_assoc();
-        if ($password == $admin['Password']) {
+
+        // Verify hashed password
+        if (password_verify($password, $admin['Password'])) {
+            // Login successful
             $_SESSION['admin_id'] = $admin['Admin_ID'];
-            $_SESSION['admin_name'] = $admin['Name'];            header("Location: adminDashboard.php");
+            $_SESSION['admin_name'] = $admin['Name'];
+
+            header("Location: adminDashboard.php");
             exit();
         } else {
+            // Wrong password
             $error_message = "Invalid password!";
         }
     } else {
+        // Username not found
         $error_message = "Admin not found!";
     }
 
@@ -35,7 +45,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #4CAF50, #2F80ED);
@@ -121,7 +130,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: #0056b3;
         }
 
-        /* Animations */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -133,7 +141,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .login-container {
                 padding: 20px;
@@ -159,7 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h2>Admin Login</h2>
 
     <!-- Show error message if any -->
-    <?php if (isset($error_message)) { ?>
+    <?php if (!empty($error_message)) { ?>
         <div class="error-message"><?php echo $error_message; ?></div>
     <?php } ?>
 
@@ -172,8 +179,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="admin_password" id="admin_password" placeholder="Enter your password" required>
 
         <button type="submit">Login</button>
-        <span style="margin-left: 230px; color: blue;">Forgot Password?</span>
 
+        <a href="forgot_password_admin/forgot_password_admin.php"><i class="fas fa-unlock-alt"></i> Forgot Password?</a>
     </form>
 
     <a href="index.php"><i class="fas fa-arrow-left"></i> Back</a>

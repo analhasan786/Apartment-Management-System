@@ -172,28 +172,28 @@ $apartments = $conn->query($sql_apartments);
     <div class="main-box">
         <div class="content">
             <h2>Tenant Dashboard</h2>
-            <p>Welcome to the Owner Dashboard. Here you can see a quick overview of the Current data related to your tenant, unit, floor, employees, total rent and Maintenamnce sections.</p>
+            <p>Welcome to the tenant Dashboard. Here you can see a quick overview of the Current data related to your tenant, unit, floor, complain .</p>
             <div class="dashboard-boxes">
                 <div class="dashboard-box">
                     <h3>Unit Details</h3>
                     <p><?php
                         //  echo $apartments_count; 
                         ?></p>
-                    <a href="apartments.php">More Info</a>
+                    <a href="unit.php">More Info</a>
                 </div>
-                <div class="dashboard-box">
+                <!-- <div class="dashboard-box">
                     <h3>Rented Statement</h3>
                     <p><?php
                         //  echo $apartments_count; 
                         ?></p>
                     <a href="apartments.php">More Info</a>
-                </div>
+                </div> -->
                 <div class="dashboard-box">
-                    <h3>Toatl Complain </h3>
+                    <h3>Total Complain </h3>
                     <p><?php
                         //  echo $apartments_count; 
                         ?></p>
-                    <a href="apartments.php">More Info</a>
+                    <a href="complaint_form.php">More Info</a>
                 </div>
             </div>
         </div>

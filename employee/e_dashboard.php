@@ -11,63 +11,7 @@ $emp_id = $_SESSION['id'];
 $emp_name = $_SESSION['name']; 
 ?>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            padding: 20px;
-        }
-        .dashboard {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 500px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #0056b3;
-        }
-    </style>
-</head>
-<body>
 
-<div class="dashboard">
-    <h1>Employee Dashboard</h1>
-    <h2>Welcome, <?= htmlspecialchars($emp_name); ?></h2>
-    <ul>
-        <li><a href="salary.php">💰 View Salary</a></li>
-        <li><a href="complaints.php">🛠️💰🚪 Manage Complaints</a></li>
-        <li><a href="logout.php">🚪 Logout</a></li>
-    </ul>
-</div>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en"> -->
 
 <head>
     <meta charset="UTF-8">
@@ -106,17 +50,13 @@ $emp_name = $_SESSION['name'];
                 <a href="apartments.php">See Salary</a>
             </div>
 
-            <div class="dashboard-box">
-                <h3>Total Tenants</h3>
-                
-                <a href="tenants.php">Manage Tenants</a>
-            </div>
+           
 
             <div class="dashboard-box">
-                <h3>Mantenance</h3>
+                <h3>Total Commplain</h3>
                 <p><?php
                 //  echo $payments_count; ?></p>
-                <a href="payments.php">Manage Mantenance</a>
+                <a href="../complaint_form.php">Add Complain</a>
             </div>
 
             <div class="dashboard-box">
@@ -126,10 +66,10 @@ $emp_name = $_SESSION['name'];
                 <a href="maintenance.php">Manage Maintenance</a>
             </div>
             <div class="dashboard-box">
-                <h3>Total Employees</h3>
+                <h3>Visitor List</h3>
                 <p><?php
                 //  echo $emp_count; ?></p>
-                <a href="manage_employee.php">Add Employee</a>
+                <a href="../add_visitor.php">Add Visitor</a>
             </div>
         </div>
     </div>

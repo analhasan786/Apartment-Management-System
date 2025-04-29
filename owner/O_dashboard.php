@@ -54,20 +54,20 @@ $emp_name = $_SESSION['name'];
                 <h3>My Unit</h3>
                 <p><?php
                 //  echo $apartments_count; ?></p>
-                <a href="apartments.php">See Unit</a>
+                <a href="owner_units.php">See Unit</a>
             </div>
 
             <div class="dashboard-box">
                 <h3>My Tenants</h3>
                 
-                <a href="tenants.php">See Tenants</a>
+                <a href="../tenants.php">See Tenants</a>
             </div>
 
             <div class="dashboard-box">
                 <h3>Total Employees</h3>
                 <p><?php
                 //  echo $payments_count; ?></p>
-                <a href="payments.php">See Employees</a>
+                <a href="o_employee.php">See Employees</a>
             </div>
             <div class="dashboard-box">
                 <h3>Total Rent</h3>
@@ -86,19 +86,19 @@ $emp_name = $_SESSION['name'];
                 <h3>Total Complain</h3>
                 <p><?php 
                 // echo $maintenance_count; ?></p>
-                <a href="maintenance.php">Manage Maintenance</a>
+                <a href="../complaint_form.php">Manage Maintenance</a>
             </div>
             <div class="dashboard-box">
                 <h3>Register Tenant</h3>
                 <p><?php 
                 // echo $maintenance_count; ?></p>
-                <a href="maintenance.php">Manage Tenant</a>
+                <a href="register_tenant.php">Manage Tenant</a>
             </div>
             <div class="dashboard-box">
                 <h3>Visitor List</h3>
                 <p><?php 
                 // echo $maintenance_count; ?></p>
-                <a href="maintenance.php">Info</a>
+                <a href="visitor.php">Info</a>
             </div>
             
         </div>
